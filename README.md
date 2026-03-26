@@ -196,12 +196,58 @@ http://prometheus-server.monitoring.svc.cluster.local
 
 ---
 
-## 🔮 Future Enhancements
+## ❗ Problem Statement
 
-* Integrate Alertmanager
-* Add Ingress Controller
-* Monitor custom applications
-* CI/CD pipeline integration
+Kubernetes environments generate a large volume of metrics related to cluster health, application performance, and resource utilization. However, without a proper monitoring system:
+
+* There is no centralized visibility into system performance
+* Troubleshooting issues becomes time-consuming and complex
+* Identifying bottlenecks or failures in real-time is difficult
+* Manual monitoring approaches are inefficient and not scalable
+
+To address these challenges, a scalable and automated monitoring solution was required.
+
+---
+
+## ⚠️ Challenges Faced
+
+During the implementation of this project, several real-world challenges were encountered:
+
+### 🔹 1. Kubernetes Cluster Connectivity Issues
+
+* Faced errors like *“cluster unreachable”* due to outdated kubeconfig
+* Resolved by updating configuration using AWS CLI
+
+### 🔹 2. Helm Deployment Failures
+
+* Prometheus Helm release failed with timeout errors
+* Root cause: high resource requirements and pod readiness delays
+* Solution: switched to a lightweight Prometheus setup and adjusted Helm configurations
+
+### 🔹 3. Resource Constraints
+
+* Initial deployment failed on low-resource nodes
+* Upgraded instance type / optimized configurations to reduce load
+
+### 🔹 4. Debugging Pod Failures
+
+* Encountered issues like `Pending` and `CrashLoopBackOff`
+* Used `kubectl describe` and `kubectl logs` to troubleshoot
+
+### 🔹 5. Prometheus–Grafana Integration
+
+* Initial difficulty in connecting data source
+* Resolved by using correct internal service URL within Kubernetes
+
+---
+
+## 💡 Key Learnings
+
+* Importance of proper cluster configuration and connectivity
+* Hands-on experience with Helm chart debugging
+* Practical understanding of Kubernetes monitoring architecture
+* Real-world troubleshooting using kubectl and logs
+
 
 ---
 
