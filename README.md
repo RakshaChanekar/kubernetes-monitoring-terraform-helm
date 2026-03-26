@@ -167,8 +167,14 @@ http://prometheus-server.monitoring.svc.cluster.local
 ## 📸 Deliverables
 
 * ✔ Running Pods (`kubectl get pods -n monitoring`)
+  <img width="940" height="616" alt="image" src="https://github.com/user-attachments/assets/9ca44e13-4f4a-4545-8092-bb88682f23af" />
+
 * ✔ Prometheus UI
+  <img width="940" height="496" alt="image" src="https://github.com/user-attachments/assets/c7451402-1807-4933-9a5b-aef41a5fc0fa" />
+
 * ✔ Grafana Dashboard
+  <img width="940" height="494" alt="image" src="https://github.com/user-attachments/assets/bcbd40cc-3b35-4039-b16c-cf51a46b8be4" />
+
 
 ---
 
